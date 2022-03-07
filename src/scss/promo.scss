@@ -1,0 +1,132 @@
+.promo {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-gap: 20px;
+    background-color: #150433;
+    background-size: 100% 100%;
+    padding: 0 calc(50% - 370px);
+    color: #ffffff;
+    padding-bottom: 200px;
+}
+
+.promo-item {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.img {
+    margin-top: 250px;
+    z-index: 100;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.img-back {
+    z-index: 1;
+    position: absolute;
+    top: 200px;
+    left: 250px;
+}
+
+.promo h3 {
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 157%;
+    margin-top: 250px;
+}
+
+.promo p {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 157%;
+}
+
+@media (min-width: 320px) and (max-width: 574px) {
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+    .img-back {
+        display: none;
+    }
+    .img {
+        width: 70%;
+        margin: 0 50px;
+        margin-top: 20px;
+    }
+    .promo-text {
+        width: 60%;
+    }
+    .promo h3 {
+        font-size: 30px;
+        line-height: 107%;
+        margin-top: 30px;
+    }
+    .promo p {
+        font-size: 18px;
+        line-height: 107%;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 30px;
+    }
+    .img-back {
+        display: none;
+    }
+    .img {
+        width: 70%;
+        margin: 0 50px;
+        margin-top: 50px;
+    }
+    .promo-text {
+        width: 60%;
+    }
+    .promo h3 {
+        font-size: 30px;
+        line-height: 107%;
+        margin-top: 50px;
+    }
+    .promo p {
+        font-size: 18px;
+        line-height: 107%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .promo-item,
+    .promo-text {
+        padding: 0 calc(50% - 370px);
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .promo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

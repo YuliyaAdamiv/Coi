@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header-inner">
+        <img class="logo" src='img/Logo.png' alt="image">
+        <div class="menu-content"></div>
+        <nav class="nav">
+            <ul class="nav-items">
+                <li>
+                    <a class="nav-item" href="#slider">Нашe рішення</a></li>
+                <li>
+                    <a class="nav-item" href="#promo">Хто ми</a></li>
+                <li>
+                    <a class="nav-item" href="#help">Допомога</a></li>
+                <li>
+                    <a class="nav-item" href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <img class="logo" src="img/Logo.png" alt="image">
+            <ul class="menu-container">
+                <li><a class="menu-item" href="#slider">Наше рішення</a></li>
+                <li><a class="menu-item" href="#promo">Хто ми</a></li>
+                <li><a class="menu-item" href="#help">Допомога</a></li>
+                <li><a class="menu-item" href="#footer">Контакти</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger-container">
+            <div class="hamburger">
+                <img class="menu-icon" src="https://img.icons8.com/metro/25/ffffff/menu.png" />
+                <img class="close-icon" src="https://img.icons8.com/ios-glyphs/25/ffffff/delete-sign.png" />
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <section class="slider">
+            <div class="swiper mySwiper" id="slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <h1> Ми робимо
+                            <span class="color-text">класний бізнес</span>
+                        </h1>
+                        <p>Ми допоможемо вам зробити ваш бізнес<br> успішним та прибутковим. Допомагаємо <br>всім, хто цього хоче!</p>
+                        <button class="btn">Безкоштовна консультація</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1> Ми робимо
+                            <span class="color-text">класний бізнес</span>
+                        </h1>
+                        <p>Ми допоможемо вам зробити ваш бізнес<br> успішним та прибутковим. Допомагаємо <br>всім, хто цього хоче!</p>
+                        <button class="btn">Безкоштовна консультація</button>
+                    </div>
+                    <div class="swiper-slide">
+                        <h1> Ми робимо
+                            <span class="color-text">класний бізнес</span>
+                        </h1>
+                        <p>Ми допоможемо вам зробити ваш бізнес<br> успішним та прибутковим. Допомагаємо <br>всім, хто цього хоче!</p>
+                        <button class="btn">Безкоштовна консультація</button>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="promo" id="promo">
+            <div class="promo-text">
+                <h3>Ми професіонали <br>у ведденні бізнесу</h3>
+                <p>Ми настільки круті, що у нас стільки грошей, <br>що нам немає сенсу вас обманювати.</p>
+                <p> Даємо зуб і хрест на пузі.</p>
+                <button class="btn">Консультація</button>
+            </div>
+            <div class="promo-item">
+                <img class="img" src="img/photo-section.png" alt="image">
+                <img class="img-back" src="img/background-photo-section.png" alt="image">
+            </div>
+        </section>
+        <section class='form-section' id='help'>
+            <div class="form-img">
+                <img class="form-main" src="img/form-main.png" alt="image">
+                <img class="form-back" src="img/form-background.png" alt="image">
+            </div>
+            <div class="form">
+                <p class="help">Допомога</p>
+                <h3>Запитуйте у
+                    <span class="color-text">професіоналів</span>
+                </h3>
+                <form id="basic-form" method="post">
+                    <fieldset class="form-group has-feedback">
+                        <legend>Iм'я</legend>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </fieldset>
+                    <fieldset class="phone_mask form-group has-feedback">
+                        <legend>Телефон</legend>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="+38(0__)___-__-__" required>
+                    </fieldset>
+                    <fieldset class="form-group has-feedback">
+                        <legend>Email</legend>
+                        <input type="email" placeholder="biznes@gmal.com" id="email" name="email" class="form-control" required>
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-arwa">
+                            <select name="test" data-multiple="true" data-replace="jselect" data-placeholder="Оберіть пункт" data-state="">
+                                <option value="1" >Пункт 1</option>
+                                <option value="2" >Пункт 2</option>
+                                <option value="3" >Пункт 3</option>
+                                <option value="4" >Пункт 4</option>
+                        </select>
+                        </div>
+                    </fieldset>
+                    <div class="row">
+                        <label><input id="cb1" type="checkbox" checked="checked">Checkbox 1</label>
+                        <label><input id="cb2" type="checkbox" checked="checked">Checkbox 2</label>
+                        <label><input id="cb3" type="checkbox">Checkbox 3</label>
+
+                    </div>
+                    <div class="row">
+                        <label for="rb1"><input id="rb1" type="radio" name="rb" value="rb1">Radiobton 1</label>
+                        <label for="rb2"><input id="rb2" type="radio" name="rb" value="rb2" checked="checked">Radiobton 2</label>
+                        <label for="rb3"><input id="rb3" type="radio" name="rb" value="rb3">Radiobton 3</label>
+                    </div>
+                    <textarea id="message" name="message" class="message" placeholder="Коментар"></textarea>
+                    <div class="container">
+                        <div data-toggle="modal" data-target="#modal-1">
+                            <button class="btn">Відправити дані</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="footer">
+        <ul class="nav-footer">
+            <li>
+                <a href="#"><img class="logo-footer" src='img/Logo.png' alt="image"></a>
+            </li>
+            <li>
+                <div class="menu-content"></div>
+            </li>
+            <li>
+                <a href="#slider">Нашe рішення</a></li>
+            <li>
+                <a href="#promo">Хто ми</a></li>
+            <li>
+                <a href="#help">Допомога</a></li>
+            <li>
+                <a href="#footer">Контакти</a></li>
+            <li>
+                <div class="menu-content"></div>
+            </li>
+            <li>
+                <a>&copy; 2020 Всі права захищені</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div id="modal-1" class="modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" title="close">×</a>
+                    <img class="done" src='./img/done.png' alt="image">
+                    <h3 class="modal-title">Ваше повідомлення відправлено успiшно!</h3>
+
+                </div>
+                <div class="modal-body">
+                    Дякуємо! Ваше повідомлення відправлено успішно. Очікуйте на відповідь!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/inputmask/inputmask.min.js"></script>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/select.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+
+
+
+
+</html>

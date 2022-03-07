@@ -1,0 +1,184 @@
+.jselect {
+    position: relative;
+    height: 2rem;
+    font-size: 1rem;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+}
+
+.form-arwa {
+    width: 450px;
+}
+
+.jselect>.jselect__display {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: left;
+    background-color: white;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        display: block;
+        width: 10px;
+        height: 2px;
+        transition: all 0.3s ease-out;
+        background-color: #333333;
+        transform: translate(-3px, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(3px, -50%) rotate(-45deg);
+    }
+    &:hover {
+        &::before,
+        &::after {
+            background-color: #000;
+        }
+    }
+}
+
+.jselect>.jselect__display>span {
+    opacity: 0.65;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.jselect>.jselect__display[aria-disabled="true"] {
+    cursor: not-allowed;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0.5;
+}
+
+.jselect>.jselect__hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border: none;
+    color: transparent;
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+}
+
+.jselect>.jselect__menu {
+    flex-direction: column;
+    position: absolute;
+    display: none;
+    border: none;
+    border-radius: 0.25rem;
+    top: 2.5rem;
+    z-index: 1;
+    background-color: white;
+    width: 100%;
+}
+
+.jselect.reverse>.jselect__menu {
+    top: unset;
+    bottom: 2.5rem;
+}
+
+.jselect.open>.jselect__display~.jselect__menu {
+    display: flex;
+}
+
+.jselect.reverse>.jselect__menu {
+    flex-direction: column-reverse;
+}
+
+.jselect>.jselect__menu>.jselect__list {
+    display: flex;
+    flex-direction: column;
+    max-height: 20rem;
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+}
+
+.jselect__list>.jselect__noresult {
+    padding: 0.5rem 1rem;
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.jselect--option {
+    overflow: auto;
+    min-height: 2rem;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0;
+}
+
+.jselect--option:first-child {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.jselect--option * {
+    cursor: default;
+    color: inherit;
+}
+
+.jselect--option.focus {
+    background-color: #150433;
+    color: white;
+}
+
+.jselect--option.selected {
+    color: white;
+    background-color: #150433;
+}
+
+.jselect--option.focus.selected {
+    color: white;
+    background-color: #150433;
+}
+
+.jselect--option.selected small {
+    color: #efefef !important;
+}
+
+.jselect--option.disabled>* {
+    opacity: 0.5;
+}
+
+.jselect--option .jselect--option__body {
+    display: inline-block;
+    clear: both;
+}
+
+.jselect--option .jselect--option__body span {
+    display: block;
+    margin-top: 0.1rem;
+    color: inherit;
+}
+
+.jselect--option .jselect--option__img+.jselect--option__body span {
+    margin-top: 0.5rem;
+}
+
+.jselect--option>.jselect--option__body small {
+    display: block;
+    color: #858585;
+    margin-top: 0.2rem;
+}

@@ -1,0 +1,326 @@
+.form-section {
+    padding: 0 calc(50% - 370px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: 50%;
+}
+
+.form-img {
+    margin-top: 174px;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-bottom: 120px;
+}
+
+.form-main {
+    z-index: 100;
+    margin-right: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.form-back {
+    z-index: 1;
+    position: absolute;
+    bottom: 50px;
+    right: 330px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.form h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 157%;
+    margin: 0 20px;
+}
+
+.help {
+    color: #000;
+}
+
+fieldset {
+    padding: 15px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.select {
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.select li a {
+    text-decoration: none;
+    color: #2d2f31;
+}
+
+#cb1,
+#cb2,
+#cb3 {
+    accent-color: #150433;
+}
+
+#rb1,
+#rb2,
+#rb3 {
+    accent-color: #150433;
+}
+
+input {
+    outline: none;
+}
+
+.slide li:last-child {
+    margin-right: 0;
+}
+
+.slide li:first-child {
+    margin-left: 0;
+}
+
+.slide {
+    clear: both;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    text-align: start;
+    transition: height .4s ease;
+}
+
+#touch {
+    position: absolute;
+    opacity: 0;
+    height: 0px;
+    border: none;
+}
+
+#touch:checked+.slide {
+    height: 340px;
+}
+
+input:checked {
+    background-color: #150433;
+}
+
+textarea {
+    padding: 15px 30px;
+    height: 122px;
+    width: 83%;
+}
+
+#name,
+#phone,
+#email {
+    position: absolute;
+    top: 0px;
+}
+
+.has-error {
+    color: #F61067;
+    position: absolute;
+    top: 30px;
+}
+
+.has-error::after {
+    content: url("https://img.icons8.com/color/20/26e07f/delete-sign--v1.png");
+    position: absolute;
+    right: -70px;
+    top: -35px;
+}
+
+label#name-error.has-error::after {
+    position: absolute;
+    right: -170px;
+}
+
+.has-success {
+    color: green;
+    border: 1px solid green;
+}
+
+.has-success::after {
+    content: url("https://img.icons8.com/external-becris-lineal-becris/20/26e07f/external-check-mintab-for-ios-becris-lineal-becris-1.png");
+}
+
+.done {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 320px) and (max-width: 574px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    .form-back {
+        display: none;
+    }
+    .form-main {
+        width: 100%;
+    }
+    .form {
+        width: 100%;
+        margin-top: 10px;
+    }
+    .form h3 {
+        font-size: 25px;
+        line-height: 90%;
+        margin: 10px 0 20px 0;
+    }
+    .form-img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .select span::after {
+        display: none
+    }
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .form-back {
+        display: none;
+    }
+    .form-main {
+        width: 90%;
+    }
+    .form {
+        margin-top: 30px;
+    }
+    .form-img {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 200px;
+    }
+    textarea {
+        width: 87%;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1300px) {
+    .form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    textarea {
+        width: 90%;
+    }
+}
+
+.__select {
+    position: relative;
+    height: 40px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    &[data-state="active"] {
+        .__select__title {
+            &::before {
+                transform: translate( -3px, -50%) rotate(-45deg);
+            }
+            &::after {
+                transform: translate(3px, -50%) rotate(45deg);
+            }
+        }
+        .__select__content {
+            opacity: 1;
+        }
+        .__select__label+.__select__input+.__select__label {
+            max-height: 40px;
+            border-top-width: 1px;
+        }
+    }
+}
+
+.__select ul {
+    width: 100%;
+    background: #FFFFFF;
+    padding-inline-start: 0px;
+}
+
+.__select .slide li a {
+    color: #000;
+}
+
+.__select__title {
+    padding: 15px 0 15px 15px;
+    color: #2d2f31;
+    cursor: pointer;
+    display: block;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        display: block;
+        width: 10px;
+        height: 2px;
+        transition: all 0.3s ease-out;
+        background-color: #333333;
+        transform: translate(-3px, -50%) rotate(45deg);
+    }
+    &::after {
+        transform: translate(3px, -50%) rotate(-45deg);
+    }
+    &:hover {
+        &::before,
+        &::after {
+            background-color: #000;
+        }
+    }
+}
+
+.slide li {
+    padding: 30px;
+    list-style-type: none;
+    &:hover {
+        filter: invert(100%);
+        background-color: #b8dc70;
+        width: 100%;
+        list-style-type: none;
+        text-decoration: none;
+        margin: 0;
+    }
+}
