@@ -4,6 +4,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .logo-footer {
@@ -193,18 +196,116 @@ label#name-error.has-error::after {
 }
 
 .has-success {
+  display: block;
   color: green;
-  border: 1px solid green;
+  position: absolute;
+  margin-left: 45vw;
+  margin-top: -61px;
+  z-index: 100;
 }
 
-.has-success::after {
-  content: url("https://img.icons8.com/external-becris-lineal-becris/20/26e07f/external-check-mintab-for-ios-becris-lineal-becris-1.png");
+fieldset {
+  z-index: 1;
 }
 
 .done {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+  opacity: 0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: auto;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  margin-top: 200px;
+  width: 700px;
+  height: 334px;
+}
+
+.small-text {
+  font-family: "Lato", "sen-serif";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 36px;
+}
+
+.modal-title {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 50px;
+}
+
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  opacity: 0.5;
+  text-decoration: none;
+}
+
+.close:focus,
+.close:hover {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  overflow: auto;
+  margin: 0 50px;
+  text-align: center;
 }
 
 @media (min-width: 320px) and (max-width: 574px) {
@@ -214,7 +315,7 @@ label#name-error.has-error::after {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
   }
 
   .form-back {
@@ -227,7 +328,11 @@ label#name-error.has-error::after {
 
   .form {
     width: 100%;
-    margin-top: 10px;
+  }
+
+  #jselect-test {
+    width: 100%;
+    font-size: 14px;
   }
 
   .form h3 {
@@ -243,6 +348,25 @@ label#name-error.has-error::after {
 
   .select span::after {
     display: none;
+  }
+
+  input {
+    width: 85%;
+  }
+
+  .jselect {
+    margin-top: -15px;
+  }
+
+  .rows {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .has-success {
+    margin-left: 40vw;
   }
 }
 
@@ -287,7 +411,7 @@ label#name-error.has-error::after {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1300px) {
+@media (min-width: 1025px) and (max-width: 1800px) {
   .form-section {
     display: flex;
     flex-direction: column;
@@ -383,6 +507,9 @@ label#name-error.has-error::after {
 }
 header {
   position: absolute;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .header-inner {
@@ -606,98 +733,10 @@ li:first-child {
   }
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1050;
-  opacity: 0;
-  -webkit-transition: opacity 400ms ease-in;
-  -moz-transition: opacity 400ms ease-in;
-  transition: opacity 400ms ease-in;
-  pointer-events: none;
-}
-
-.modal.show {
-  opacity: 1;
-  pointer-events: auto;
-  overflow-y: auto;
-}
-
-.modal-dialog {
-  position: relative;
-  width: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 150px;
-  margin-bottom: 150px;
-}
-
-.modal-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
-  outline: 0;
-}
-
 @media (min-width: 768px) {
   .modal-content {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
-}
-
-.modal-header {
-  display: block;
-  padding: 15px;
-  border-bottom: 1px solid #eceeef;
-}
-
-.modal-title {
-  margin: 0 50px;
-  line-height: 1.5;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.close {
-  float: right;
-  font-family: sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
-  opacity: 0.5;
-  text-decoration: none;
-}
-
-.close:focus,
-.close:hover {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-  opacity: 0.75;
-}
-
-.modal-body {
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  padding: 15px;
-  overflow: auto;
-  margin: 0 50px;
-  text-align: center;
 }
 .promo {
   display: grid;
@@ -705,7 +744,7 @@ li:first-child {
   grid-gap: 20px;
   background-color: #150433;
   background-size: 100% 100%;
-  padding: 0 calc(50% - 370px);
+  padding: 0 370px;
   color: #ffffff;
   padding-bottom: 200px;
 }
@@ -739,16 +778,18 @@ li:first-child {
 }
 
 .promo p {
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 300;
   font-size: 25px;
   line-height: 157%;
+  margin-bottom: 39px;
 }
 
 @media (min-width: 320px) and (max-width: 574px) {
   .promo {
     display: flex;
+    padding: 0 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -770,7 +811,7 @@ li:first-child {
   }
 
   .promo h3 {
-    font-size: 30px;
+    font-size: 25px;
     line-height: 107%;
     margin-top: 30px;
   }
@@ -789,6 +830,7 @@ li:first-child {
 @media (min-width: 575px) and (max-width: 767px) {
   .promo {
     display: flex;
+    padding: 0 50px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -835,7 +877,7 @@ li:first-child {
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1300px) {
+@media (min-width: 1025px) and (max-width: 1800px) {
   .promo {
     display: flex;
     flex-direction: column;
@@ -850,7 +892,7 @@ li:first-child {
 
 body {
   background: #E9E9E9;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -862,9 +904,9 @@ p {
 }
 
 .btn {
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 25px;
   text-align: center;
@@ -1072,15 +1114,11 @@ p {
 }
 .slider {
   background-image: url("../img/background.png");
-  padding: 0 calc(50% - 370px);
+  padding: 0 calc(50% - 470px);
   background-position: center center;
   background-size: cover;
-  padding-bottom: 200px;
   height: 100vh;
-}
-
-.swiper-wrapper {
-  margin-top: 140px;
+  padding-top: 140px;
 }
 
 .swiper-slide {
@@ -1102,9 +1140,9 @@ p {
 }
 
 .swiper-slide p {
-  font-family: Lato;
+  font-family: "Lato", sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 300;
   font-size: 20px;
   line-height: 31px;
 }
@@ -1145,7 +1183,7 @@ p {
   }
 
   .btn {
-    font-size: 15px;
+    font-size: 10px;
     line-height: 20px;
     text-align: center;
     margin: 10px 0px;
@@ -1155,7 +1193,7 @@ p {
   }
 
   .slider {
-    padding-bottom: 500px;
+    padding-bottom: 50px;
   }
 }
 
@@ -1168,6 +1206,7 @@ p {
     font-size: 40px;
     line-height: 90%;
     width: 50%;
+    margin-top: 150px;
   }
 
   .swiper-slide p {
@@ -1187,17 +1226,18 @@ p {
   }
 
   .slider {
-    padding-bottom: 350px;
+    padding-bottom: 50px;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   #slider {
-    width: 100%;
+    width: 80%;
+    padding: 0 calc(50% - 470px);
   }
 
   .swiper-slide h1 {
-    font-size: 80px;
+    font-size: 60px;
     line-height: 118.8%;
   }
 
@@ -1207,7 +1247,7 @@ p {
   }
 
   .slider {
-    padding-bottom: 500px;
+    padding-bottom: 50px;
   }
 }
 
@@ -1222,16 +1262,12 @@ p {
   }
 
   .slider {
-    padding-bottom: 500px;
+    padding-bottom: 50px;
   }
 }
 
 @media (min-width: 1201px) {
   #slider {
     width: 100%;
-  }
-
-  .slider {
-    padding-bottom: 500px;
   }
 }

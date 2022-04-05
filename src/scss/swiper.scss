@@ -1,15 +1,14 @@
 .slider {
     background-image: url(../img/background.png);
-    padding: 0 calc(50% - 370px);
+    padding: 0 calc(50% - 470px);
     background-position: center center;
     background-size: cover;
-    padding-bottom: 200px;
     height: 100vh;
+    
+    padding-top: 140px;
 }
 
-.swiper-wrapper {
-    margin-top: 140px;
-}
+
 
 .swiper-slide {
     padding-left: 80px;
@@ -30,9 +29,9 @@
 }
 
 .swiper-slide p {
-    font-family: Lato;
+    font-family:'Lato', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     font-size: 20px;
     line-height: 31px;
 }
@@ -69,7 +68,7 @@
         margin-top: 20px;
     }
     .btn {
-        font-size: 15px;
+        font-size: 10px;
         line-height: 20px;
         text-align: center;
         margin: 10px 0px;
@@ -77,9 +76,10 @@
         padding: 10px 20px;
         width: 70%;
     }
-    .slider {
-        padding-bottom: 500px;
+    .slider{
+        padding-bottom: 50px;
     }
+    
 }
 
 @media (min-width: 575px) and (max-width: 767px) {
@@ -90,6 +90,7 @@
         font-size: 40px;
         line-height: 90%;
         width: 50%;
+        margin-top: 150px;
     }
     .swiper-slide p {
         font-size: 16px;
@@ -105,26 +106,30 @@
         padding: 10px 20px;
         width: 70%;
     }
-    .slider {
-        padding-bottom: 350px;
+    .slider{
+        padding-bottom: 50px;
     }
+    
+    
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
     #slider {
-        width: 100%;
+         width: 80%;
+        padding: 0 calc(50% - 470px);
     }
     .swiper-slide h1 {
-        font-size: 80px;
+        font-size: 60px;
         line-height: 118.8%;
     }
     .swiper-slide p {
         font-size: 20px;
         line-height: 31px;
     }
-    .slider {
-        padding-bottom: 500px;
+    .slider{
+        padding-bottom: 50px;
     }
+   
 }
 
 @media (min-width: 1025px) and (max-width: 1200px) {
@@ -135,16 +140,15 @@
         font-size: 70px;
         line-height: 118.8%;
     }
-    .slider {
-        padding-bottom: 500px;
+    .slider{
+        padding-bottom: 50px;
     }
+   
 }
 
 @media (min-width: 1201px) {
     #slider {
         width: 100%;
     }
-    .slider {
-        padding-bottom: 500px;
-    }
+    
 }

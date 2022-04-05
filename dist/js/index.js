@@ -56,8 +56,8 @@ Inputmask({
 }).mask(inputsTel)
 
 
-jQuery.validator.addMethod("phoneUA", function(value, element) {
-    return /[0-9]/.test(value);
+jQuery.validator.addMethod("phoneUK", function(value, element) {
+    return /^((?!_).)*$/gi.test(value);
 }, "Не правильно введений номер телефону");
 
 
@@ -69,7 +69,7 @@ $("#basic-form").validate({
         },
         phone: {
             required: true,
-            phoneUA: true
+            phoneUK: true
         },
         email: {
             required: true,
@@ -90,9 +90,29 @@ $("#basic-form").validate({
         },
 
     },
-    validClass: "has-success",
+    validClass: "has-valid",
     errorClass: "has-error",
 });
+
+
+
+function myFunction(event){
+x=event.target
+console.log(x)
+let classList = document.querySelector('input.form-control').classList.contains('has-valid');
+console.log(x.className)
+
+if (event.target.classList === true){
+    let success= document.querySelector('.has-success')
+    success.classList.add('has-valid')
+    console.log(success.classList)
+    success.style.display="inline"
+}
+
+}
+
+
+
 
 $(document).on('click', '[data-toggle="modal"]', function() {
     var target = $(this).attr('data-target');
@@ -124,3 +144,5 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
         selectSingle.setAttribute('data-state', '');
     });
 }
+
+
