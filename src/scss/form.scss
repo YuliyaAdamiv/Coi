@@ -47,6 +47,11 @@
 
 .help {
     color: #000;
+    font-family: 'Lato', 'sen-serif';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 157%;
+
 }
 
 fieldset {
@@ -87,7 +92,9 @@ fieldset {
 input {
     outline: none;
 }
-
+.checkbox{
+    display: inline;
+}
 .slide li:last-child {
     margin-right: 0;
 }
@@ -124,6 +131,7 @@ textarea {
     padding: 15px 30px;
     height: 122px;
     width: 83%;
+    resize: none;
 }
 
 #name,
@@ -267,7 +275,9 @@ fieldset{
     text-align: center;
     
 }
-
+.form-control{
+    width: 90%;
+}
 
 @media (min-width: 320px) and (max-width: 574px) {
     .form-section {
@@ -304,23 +314,25 @@ fieldset{
     .select span::after {
         display: none
     }
-    input{
+    .form-control{
         width:85%;
     }
     .jselect{
        margin-top:-15px;
     }
-    .rows{
-        display:flex;
-        flex-direction:column;
-        justify-content: center;
-        align-items: center;
-    }
+    
     .has-success{
         margin-left: 40vw;
     }
+    select{
+        margin-bottom: 0px;
+    }
+    textarea {
+        width: 70%;
+    }
     
 }
+
 
 @media (min-width: 575px) and (max-width: 767px) {
     .form-section {
@@ -358,12 +370,24 @@ fieldset{
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1800px) {
+@media (min-width: 1025px) and (max-width: 1300px) {
     .form-section {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    textarea {
+        width: 90%;
+    }
+}
+@media (min-width: 1301px) and (max-width: 1800px) {
+    .form-section{
+        width:80%;
+        padding: 0 calc(50% - 570px);
+    }
+    .checkbox{
+        display: inline;
     }
     textarea {
         width: 90%;
